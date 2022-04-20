@@ -5,7 +5,7 @@ from pyspark.sql.functions import col, collect_set
 
 if __name__ == '__main__':
 
-    files = glob.glob('data/movies_*.csv')
+    files = glob.glob('data/movies_0.csv')
     if len(files) == 0:
         print('No input data found in data/ directory. Exiting')
         exit()
@@ -43,3 +43,5 @@ if __name__ == '__main__':
     # Spremiti starredIn DataFrame
     print('Primjer osoba id:lista filmova')
     starredIn.show(10)
+
+    spark.sparkContext.stop()
