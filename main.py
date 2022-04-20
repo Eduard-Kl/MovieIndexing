@@ -5,7 +5,7 @@ from pyspark.sql.functions import col, collect_set
 
 if __name__ == '__main__':
 
-    files = glob.glob('data/movies_0.csv')
+    files = glob.glob('data/movies_*.csv')
     if len(files) == 0:
         print('No input data found in data/ directory. Exiting')
         exit()
